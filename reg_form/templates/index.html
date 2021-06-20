@@ -5,59 +5,65 @@
     <title>Registeration Form</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-<div class="go-home my-4">
-  <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+<body bgcolor="cyan">
+<div class="goHome my-4">
+  <nav class="md:ml-auto flex flex-wrap font-medium items-center text-base justify-center rounded border border-gray-300">
     <a href="/" class="mr-5 hover:text-gray-900">Home</a>
     </nav>
 </div>
 <form action="register" method="post">
-<section class="text-white-600 body-font relative">
+  {% csrf_token %}
+<section class="text-red-600 body-font relative">
   <div class="container px-5 py-15 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Registeration Form</h1>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-red-900">Registeration Form</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Register for a great opportunity to learn and develop your skills</p>
     </div>
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
       <div class="flex flex-wrap -m-2">
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="f_name" class="leading-7 text-sm text-gray-600">First Name</label>
-            <input type="text" id="f_name" name="f_name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="f_name" class="leading-7 text-md text-red-600">First Name</label>
+            <input type="text" id="f_name" name="f_name" class="w-full bg-whit-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="l_name" class="leading-7 text-sm text-gray-600">Last Name</label>
-            <input type="text" id="l_name" name="l_name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="l_name" class="leading-7 text-md text-red-600">Last Name</label>
+            <input type="text" id="l_name" name="l_name" class="w-full bg-white-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="username" class="leading-7 text-sm text-gray-600">User Name</label>
-            <input type="text" id="username" name="username" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="username" class="leading-7 text-md text-red-600">User Name</label>
+            <input type="text" id="username" name="username" class="w-full bg-white-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
-            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-            <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="email" class="leading-7 text-md text-red-600">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-white-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="pass1" class="leading-7 text-sm text-gray-600">Password</label>
-            <input type="password" id="pass1" name="pass1" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="pass1" class="leading-7 text-md text-red-600">Password</label>
+            <input type="password" id="pass1" name="pass1" class="w-full bg-white-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="pass2" class="leading-7 text-sm text-gray-600">Confirm Password</label>
-            <input type="password" id="pass2" name="pass2" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="pass2" class="leading-7 text-md text-red-600">Confirm Password</label>
+            <input type="password" id="pass2" name="pass2" class="w-full bg-white-100 bg-opacity-100 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full">
           <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+        </div>
+        <div class="text-center">
+          {% for message in messages%}
+          <h3>{{message}} </h3>
+          {% endfor %}
         </div>
         <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
           <a class="text-indigo-500">harry@harrymnc.com</a>
