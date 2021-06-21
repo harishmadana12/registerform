@@ -15,9 +15,16 @@
       <span class="ml-3 text-xl">Harry Tutorial</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <a href="/" class="mr-5 hover:text-gray-900">Home</a>
-<!--      <a class="mr-5 hover:text-gray-900">About</a>-->
-      <a href="log_form/register" class="mr-5 hover:text-gray-900">Register</a>
+      <ul class="flex flex-row align-items-start justify-content-start">
+        <li><a href="/" class="mr-5 hover:text-gray-900">Home</a></li>
+        {% if user.is_authenticated %}
+        <li>Hello, {{user.first_name}} &nbsp;&nbsp;</li>
+        <li><a href="log_form/logout" class="mr-5 hover:text-gray-900">Log Out</a></li>
+        {% else %}
+        <li><a href="log_form/login" class="mr-5 hover:text-gray-900">Log In</a></li>
+        <li><a href="log_form/register" class="mr-5 hover:text-gray-900">Register</a></li>
+        {% endif %}
+      </ul>
     </nav>
   </div>
 </header>
@@ -26,19 +33,6 @@
     <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
       <h1 class="title-font font-medium text-3xl text-gray-900">Python and Django Complete Tutorial By Harry</h1>
       <p class="leading-relaxed mt-4">Learn Python and Django easily by just register with us and get all the latest information and projects regularly.</p>
-    </div>
-    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-      <p>Already registered?</p><br>
-        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Log in</h2>
-      <div class="relative mb-4">
-        <label for="user-name" class="leading-7 text-sm text-gray-600">User Name</label>
-        <input type="text" id="user-name" name="user-name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="relative mb-4">
-        <label for="pass" class="leading-7 text-sm text-gray-600">Password</label>
-        <input type="password" id="pass" name="pass" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
     </div>
   </div>
 </section>
@@ -57,74 +51,42 @@
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
-          <li>
             <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
-          <li>
             <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
-          <li>
             <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
-          <li>
             <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
         </nav>
       </div>
     </div>
   </div>
-  <div class="bg-gray-100">
+  <div class="bg-green-100">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
       <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 —
         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@harrytuts</a>
