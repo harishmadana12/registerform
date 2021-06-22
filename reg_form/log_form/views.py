@@ -46,7 +46,7 @@ def register(request):
             return redirect('register')
 
     else:
-        return render(request, 'index.html')
+        return render(request, 'register.html')
 
 
 def logout(request):
